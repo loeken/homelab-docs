@@ -2,7 +2,7 @@
 
 - [#index](#index.md)
 - [#the-stack-from-bottom-to-top](#the-stack-from-bottom-to-top.md)
-
+- [#show-me-de-wey!](#show-me-de-wey!.md)
 # Three choices
 
 ![three-choices.svg](Excalidraw/three-choices.svg)
