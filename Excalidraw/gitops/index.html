@@ -1,0 +1,1194 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../beelink/">
+      
+      
+        <link rel="next" href="../minikube/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+    
+    
+      
+        <title>Gitops - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#text-elements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gitops
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2001%20-%20introduction/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2002%20-%20gitops%20%26%20argocd%20concepts/" class="md-nav__link">
+        Gitops & Argocd Concepts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2003%20-%20github%20repository/" class="md-nav__link">
+        Github Repository
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2004%20-%20installation%20of%20debian%20FDE/" class="md-nav__link">
+        Installation of Debian FDE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2005%20-%20installation%20overview/" class="md-nav__link">
+        Installation overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2006%20-%20beelink%20way%20-%20nginx%20ingress/" class="md-nav__link">
+        Installation on beelink sei-12 - nginx ingress
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter%2007%20-%20beelink%20way%20-%20cloudflare%20tunnels/" class="md-nav__link">
+        Installation on beelink sei-12 - nginx ingress
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Excalidraw
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Excalidraw
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../baremetal/" class="md-nav__link">
+        Baremetal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beelink/" class="md-nav__link">
+        Beelink
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Gitops
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minikube/" class="md-nav__link">
+        Minikube
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../three-choices/" class="md-nav__link">
+        Three choices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upstream_clone/" class="md-nav__link">
+        Upstream clone
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><mark>⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠</mark></p>
+<h1 id="text-elements">Text Elements<a class="headerlink" href="#text-elements" title="Permanent link">&para;</a></h1>
+<p>Gitops  ^Byv7qdiW</p>
+<p>src ^lnbNMS6v</p>
+<p>Git Repo ^d0uokuYA</p>
+<p>argocd ^WSebLmqn</p>
+<p>push ^C216NDj0</p>
+<p>pulls ^ZqwWGwxC</p>
+<p>k3s ^Yi8IxtD5</p>
+<p>deploys ^ffl88FOX</p>
+<p>%%</p>
+<h1 id="drawing">Drawing<a class="headerlink" href="#drawing" title="Permanent link">&para;</a></h1>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;excalidraw&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/1.8.26&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">215872717</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Byv7qdiW&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-69.75</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-392.75</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">131.86802673339844</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">483963213</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527610467</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gitops &quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gitops &quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gitops &quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;diamond&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">158</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">310751267</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;l9nJ_Ggt9ZMg478Jqf7vt&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-393.41666666666674</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-305.1785714285714</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#ced4da&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1959401443</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lnbNMS6v&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jeb5vtgqfgV7qZcL64plT&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527880096</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">461797677</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lnbNMS6v&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-345.21669260660815</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-258.1785714285714</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">23.600051879882812</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1893582275</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527756197</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;l9nJ_Ggt9ZMg478Jqf7vt&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rectangle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1918019277</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kLS8z6zJOK-h-JcVIsNQb&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-169.06780583611464</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-302.15527503711104</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#4c6ef5&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">270</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1748146125</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d0uokuYA&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jeb5vtgqfgV7qZcL64plT&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-48LjWheyHDZuB7qjw9Hp&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527873616</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">592789443</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d0uokuYA&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-68.8278766368959</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-251.65527503711104</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">69.5201416015625</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1912635011</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527756197</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Git Repo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Git Repo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kLS8z6zJOK-h-JcVIsNQb&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Git Repo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">281</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1771036458</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jeb5vtgqfgV7qZcL64plT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-272.05558072986895</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-248.79813217996815</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">98.46396536994479</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1123536003</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C216NDj0&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528847195</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;l9nJ_Ggt9ZMg478Jqf7vt&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.4954632900944205</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.010869486866609854</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;endBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kLS8z6zJOK-h-JcVIsNQb&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.523809523809518</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.11806375442739026</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;lastCommittedPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;endArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;points&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="mi">0</span>
+<span class="w">                </span><span class="p">],</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mf">98.46396536994479</span><span class="p">,</span>
+<span class="w">                    </span><span class="mi">0</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">82</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2012845430</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C216NDj0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-239.60763277390046</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-258.79813217996815</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">33.56806945800781</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">873529699</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528877664</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;push&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;push&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jeb5vtgqfgV7qZcL64plT&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;push&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;diamond&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">335</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28745197</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vQEnVNpq7gxfsT9YVamWG&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">329.26552749721884</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-160.94098932282537</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#82c91e&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1959401443</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WSebLmqn&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-48LjWheyHDZuB7qjw9Hp&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4nyMsX075Yv1S7o89XaMr&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527886110</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">334</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1307028227</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WSebLmqn&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">370.48146988003134</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-111.19098932282537</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">51.568115234375</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1893582275</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527847099</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;argocd&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;argocd&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vQEnVNpq7gxfsT9YVamWG&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;argocd&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">526</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9280682</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-48LjWheyHDZuB7qjw9Hp&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">343.4949732416504</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-117.829185810151</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">240.89611241109847</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">82.80898439462781</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1153312205</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ZqwWGwxC&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528847200</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vQEnVNpq7gxfsT9YVamWG&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.805134832066713</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.029439468094929963</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;endBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kLS8z6zJOK-h-JcVIsNQb&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6666666666666288</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.05577380952380825</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;lastCommittedPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;endArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;points&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="mi">0</span>
+<span class="w">                </span><span class="p">],</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mf">-240.89611241109847</span><span class="p">,</span>
+<span class="w">                    </span><span class="mf">-82.80898439462781</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">83</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1311581418</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ZqwWGwxC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">206.00688560299574</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-169.2336780074649</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.08006286621094</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">645356323</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528877665</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pulls&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pulls&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;-48LjWheyHDZuB7qjw9Hp&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pulls&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ellipse&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">117</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1017822317</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DgGiR_mS6vZ2FDqEMHlvY&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-165.0916153599241</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-53.91717979901571</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#fa5252&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">243</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1176153741</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Yi8IxtD5&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4nyMsX075Yv1S7o89XaMr&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527867793</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1305214499</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Yi8IxtD5&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-74.3031010538748</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">31.068841223430425</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">61.59602355957031</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">81639203</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682527795047</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;k3s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;k3s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DgGiR_mS6vZ2FDqEMHlvY&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;k3s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">332</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">777648682</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4nyMsX075Yv1S7o89XaMr&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">343.5700688888139</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-80.9491453506873</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">261.4889932718277</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">126.33197307036677</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1821262275</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ffl88FOX&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528847206</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vQEnVNpq7gxfsT9YVamWG&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">5.823637407824975</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.08347344981791543</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;endBinding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;elementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DgGiR_mS6vZ2FDqEMHlvY&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;gap&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.510808669172391</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;focus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.42876141670889567</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;lastCommittedPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;endArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;points&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="mi">0</span>
+<span class="w">                </span><span class="p">],</span>
+<span class="w">                </span><span class="p">[</span>
+<span class="w">                    </span><span class="mf">-261.4889932718277</span><span class="p">,</span>
+<span class="w">                    </span><span class="mf">126.33197307036677</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;versionNonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1381201590</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;isDeleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ffl88FOX&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;roughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;angle&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">185.32152104440394</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-27.783158815503924</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;strokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">55.00810241699219</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2137126477</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;groupIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;roundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;boundElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1682528877666</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;locked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;deploys&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;rawText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;deploys&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;textAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;verticalAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4nyMsX075Yv1S7o89XaMr&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;originalText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;deploys&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;lineHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;appState&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;viewBackgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemStrokeColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemBackgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#82c91e&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemFillStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hachure&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemStrokeWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemStrokeStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemRoughness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemOpacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemFontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemFontSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemTextAlign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemStartArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentItemEndArrowhead&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrow&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;scrollX&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">761.6868534551622</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;scrollY&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">477.84575122758724</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;zoom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.05</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;currentItemRoundness&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;round&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;gridSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;colorPalette&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">        </span><span class="nt">&quot;currentStrokeOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;previousGridSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div>
+%%</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
